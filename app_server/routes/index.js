@@ -4,9 +4,7 @@ var ctrlTermos = require('../controllers/termo');
 
 /* GET home page. */
 router.get('/', ctrlTermos.inicia);
-router.get('/termo/novo', ctrlTermos.carregaFormularioNovoTermo);
-router.post('/termo/novo', ctrlTermos.salvaNovoTermo);
-router.get('/termo/:id', ctrlTermos.removeTermo);
-router.get('/termo/busca/:' + encodeURIComponent('categoria'), ctrlTermos.buscaPorCategoria);
+router.get('/termo/busca/:id', ctrlTermos.carregaTermo);
+router.get('/termos/busca/:' + encodeURIComponent('categoria'), ctrlTermos.buscaPorCategoria);
 
 module.exports = router;

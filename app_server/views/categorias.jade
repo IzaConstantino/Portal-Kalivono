@@ -1,138 +1,23 @@
 // Page Content
 block content
-    .row
-        - if (termos != null)
-            each termo in termos
-                .col-sm-4.col-lg-4.col-md-4
-                    .thumbnail  
-                        if termo.multimidia
-                            img(src=termo.multimidia[0].url, alt=' ')
-                            .caption
-                                h4.pull-right
-                                h4
-                                    //- a(href='# ') Artesanato
-                                    p.text-center=termo.emPortugues
-                                    p.text-center=termo.emTerena
-                                    p.text-center=termo.categoria
-                                p
-                                    //- a(target='_blank ', href='http://www.bootsnipp.com ') Bootsnipp - http://bootsnipp.com
-                            .ratings
-                                p.pull-right Leia mais
-                                p
-                                    span.glyphicon.glyphicon-star
-                                    span.glyphicon.glyphicon-star
-                                    span.glyphicon.glyphicon-star
-                                    span.glyphicon.glyphicon-star
-                                    span.glyphicon.glyphicon-star
-        //- .col-sm-4.col-lg-4.col-md-4
-        //-     .thumbnail
-        //-         img(src='/brincadeira.jpg', alt=' ')
-        //-         .caption
-        //-             h4.pull-right
-        //-             h4
-        //-                 a(href='# ') Brincadeiras
-        //-             p
-        //-         .ratings
-        //-             p.pull-right
-        //-             p
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star-empty
-        //- .col-sm-4.col-lg-4.col-md-4
-        //-     .thumbnail
-        //-         img(src='/contos.png', alt=' ')
-        //-         .caption
-        //-             h4.pull-right
-        //-             h4
-        //-                 a(href='# ') Contos
-        //-             p
-        //-         .ratings
-        //-             p.pull-right
-        //-             p
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star-empty
-        //- .col-sm-4.col-lg-4.col-md-4
-        //-     .thumbnail
-        //-         img(src='/culinaria.jpg', alt=' ')
-        //-         .caption
-        //-             h4.pull-right
-        //-             h4
-        //-                 a(href='# ') Culin&aacute;ria
-        //-             p
-        //-         .ratings
-        //-             p.pull-right 6 reviews
-        //-             p
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star-empty
-        //-                 span.glyphicon.glyphicon-star-empty
-        //- .col-sm-4.col-lg-4.col-md-4
-        //-     .thumbnail
-        //-         img(src='/dança.png', alt=' ')
-        //-         .caption
-        //-             h4.pull-right
-        //-             h4
-        //-                 a(href='# ') Dan&ccedil;a
-        //-             p
-        //-         .ratings
-        //-             p.pull-right 18 reviews
-        //-             p
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star-empty
-        //- .col-sm-4.col-lg-4.col-md-4
-        //-     .thumbnail
-        //-         img(src='/araraVermelha.jpg', alt=' ')
-        //-         .caption
-        //-             h4.pull-right
-        //-             h4
-        //-                 a(href='# ') Fauna
-        //-             p
-        //-         .ratings
-        //-             p.pull-right
-        //-             p
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star-empty
-        //- .col-sm-4.col-lg-4.col-md-4
-        //-     .thumbnail
-        //-         img(src='/mudas.jpg', alt=' ')
-        //-         .caption
-        //-             h4.pull-right
-        //-             h4
-        //-                 a(href='# ') Flora
-        //-             p
-        //-         .ratings
-        //-             p.pull-right
-        //-             p
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star-empty
-        //- .col-sm-4.col-lg-4.col-md-4
-        //-     .thumbnail
-        //-         img(src='/moradia.jpg', alt=' ')
-        //-         .caption
-        //-             h4.pull-right
-        //-             h4
-        //-                 a(href='# ') Moradias
-        //-             p
-        //-         .ratings
-        //-             p.pull-right
-        //-             p
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star
-        //-                 span.glyphicon.glyphicon-star-empty
+  .row
+    - if (termos != null)
+        each termo in termos
+          a(href="/termo/busca/" + termo._id, title=termo.emPortugues) 
+            .col-sm-4.col-lg-4.col-md-4
+              .thumbnail  
+                if termo.multimidia
+                  img(src=termo.multimidia[0].url, alt=' ')
+                .caption
+                  h4.pull-right
+                  p.text-center=termo.emPortugues
+                  p.text-center=termo.emTerena
+                  p.text-center=termo.categoria
+                .ratings
+                  p.pull-right Leia mais
+                  p
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
