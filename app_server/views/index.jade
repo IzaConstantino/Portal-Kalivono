@@ -2,7 +2,7 @@ extends layout
 
 // Page Content
 
-block 
+block content
   .row
     .col-md-9                  
       if (termosCarousel != null)
@@ -17,8 +17,8 @@ block
                     li.active(data-target='#carousel-example-generic', data-slide-to=i)
                   else 
                     li(data-target='#carousel-example-generic', data-slide-to=i)
-            .carousel-inner
-                        // !800x300
+
+              .carousel-inner
                 -var i = -1 
                 for termo in termosCarousel
                   -i++
@@ -31,9 +31,9 @@ block
                       img.slide-image(src='#{termo.multimidia[0].url}', alt='')
                       h3.text-center=termo.emTerena
 
-            a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
-              span.glyphicon.glyphicon-chevron-left
-            a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
-              span.glyphicon.glyphicon-chevron-right
+              a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left
+              a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right
   .row
     include categorias

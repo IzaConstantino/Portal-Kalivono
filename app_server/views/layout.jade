@@ -33,28 +33,24 @@ html
             li
               a(href='#') Contato
                 // /.navbar-collapse
-    .row
-      .col-md-2
-        p.lead Kaliv&ocirc;no
-          .list-group
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Artesanato')") Artesanato
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Brincadeiras')") Brincadeiras
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Contos')") Contos
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Culinária')") Culin&aacute;ria
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Dança')") Dan&ccedil;a
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Fauna')") Fauna
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Flora')") Flora
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Moradias')") Moradias
-        .col-md-10
-          .container.theme-showcase(role='main')
-        //- .container.theme-showcase(role='main')
+  .row
+    .col-md-2
+      p.lead Kaliv&ocirc;no
+        .list-group
+        a.list-group-item(href='#', onclick="buscaPorCategoria('Artesanato')") Artesanato
+        a.list-group-item(href='#', onclick="buscaPorCategoria('Brincadeiras')") Brincadeiras
+        a.list-group-item(href='#', onclick="buscaPorCategoria('Contos')") Contos
+        a.list-group-item(href='#', onclick="buscaPorCategoria('Culinária')") Culin&aacute;ria
+        a.list-group-item(href='#', onclick="buscaPorCategoria('Dança')") Dan&ccedil;a
+        a.list-group-item(href='#', onclick="buscaPorCategoria('Fauna')") Fauna
+        a.list-group-item(href='#', onclick="buscaPorCategoria('Flora')") Flora
+        a.list-group-item(href='#', onclick="buscaPorCategoria('Moradias')") Moradias
+      //- .col-md-10
+    .container.theme-showcase.col-md-10(role='main')
+      block content
+              
+            
 
-// /.container
-// jQuery
-//- script(src='js/jquery.js ')
-// Bootstrap Core JavaScript
-//- script(src='js/bootstrap.min.js ')
-    // /.container
 .container
   
     // Footer
