@@ -1,0 +1,239 @@
+//- doctype html
+//- html
+//-   head
+//-     meta(charset='utf-8')
+//-     meta(name='viewport', content='width=device-width, initial-scale=')
+//-     meta(http-equiv="X-UA-Compatible", content="IE=edge")
+//-     title= title
+//-     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+//-     link(rel='stylesheet', href='/bootstrap/css/bootstrap-theme.min.css')
+//-     link(rel='stylesheet', href='/bootstrap/css/theme.css')
+//-   body
+//-    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+//-     .container
+//-         // Brand and toggle get grouped for better mobile display
+//-         .navbar-header
+//-             button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+//-                 span.sr-only Toggle navigation
+//-                 span.icon-bar
+//-                 span.icon-bar
+//-                 span.icon-bar
+//-                 span.icon-bar
+//-                 span.icon-bar
+//-                 span.icon-bar
+//-             a.navbar-brand(href='#') Kaliv&ocirc;no Web
+//-         // Collect the nav links, forms, and other content for toggling
+//-         #bs-example-navbar-collapse-1.collapse.navbar-collapse
+//-             ul.nav.navbar-nav
+//-                 li
+//-                     a(href='#') Home
+//-                 li
+//-                     a(href='#') Sobre
+//-                 li
+//-                     a(href='#') Contato
+//-         // /.navbar-collapse
+//-     // /.container
+//- // Page Content
+//- .container
+//-     .row
+//-         .col-md-3
+//-             p.lead Kaliv&ocirc;no
+//-             .list-group
+//-                 a.list-group-item(href='#') Artesanato
+//-                 a.list-group-item(href='#') Brincadeiras
+//-                 a.list-group-item(href='#') Contos
+//-                 a.list-group-item(href='#') Culin&aacute;ria
+//-                 a.list-group-item(href='#') Dan&ccedil;a
+//-                 a.list-group-item(href='#') Fauna
+//-                 a.list-group-item(href='#') Flora
+//-                 a.list-group-item(href='#') Moradias
+//-         .col-md-9
+//-             .row.carousel-holder
+//-                 .col-md-12
+//-                     #carousel-example-generic.carousel.slide(data-ride='carousel')
+//-                         ol.carousel-indicators
+//-                             li.active(data-target='#carousel-example-generic', data-slide-to='0')
+//-                             li.active(data-target='#carousel-example-generic', data-slide-to='1')
+//-                             li.active(data-target='#carousel-example-generic', data-slide-to='2')
+//-                             li.active(data-target='#carousel-example-generic', data-slide-to='3')
+//-                             li.active(data-target='#carousel-example-generic', data-slide-to='4')
+//-                             li.active(data-target='#carousel-example-generic', data-slide-to='5')
+//-                             li.active(data-target='#carousel-example-generic', data-slide-to='6')
+//-                             li.active(data-target='#carousel-example-generic', data-slide-to='7')
+//-                         .carousel-inner
+//-                             // !800x300
+//-                             .item.active
+//-                                 img.slide-image(src='/araraVermelha.jpg', alt='')
+//-                             .item
+//-                                 img.slide-image(src='/artesanato.jpg', alt=' ')
+//-                             .item
+//-                                 img.slide-image(src='/brincadeira.jpg', alt=' ')
+//-                             .item
+//-                                 img.slide-image(src='/contos.png ', alt=' ')
+//-                             .item
+//-                                 img.slide-image(src='/culinaria.jpg', alt=' ')
+//-                             .item
+//-                                 img.slide-image(src='/dança.png', alt=' ')
+//-                             .item
+//-                                 img.slide-image(src='/moradia.jpg', alt=' ')
+//-                             .item
+//-                                 img.slide-image(src='/mudas.jpg', alt=' ')
+//-                         a.left.carousel-control(href='#carousel-example-generic ', data-slide='prev ')
+//-                             span.glyphicon.glyphicon-chevron-left
+//-                         a.right.carousel-control(href='#carousel-example-generic ', data-slide='next ')
+//-                             span.glyphicon.glyphicon-chevron-right
+//-             .row
+//-                 .col-sm-4.col-lg-4.col-md-4
+//-                     .thumbnail
+//-                         img(src='/artesanato.jpg', alt=' ')
+//-                         .caption
+//-                             h4.pull-right
+//-                             h4
+//-                                 a(href='# ') Artesanato
+//-                             p
+//-                                 a(target='_blank ', href='http://www.bootsnipp.com ') Bootsnipp - http://bootsnipp.com
+//-                         .ratings
+//-                             p.pull-right 15 reviews
+//-                             p
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                 .col-sm-4.col-lg-4.col-md-4
+//-                     .thumbnail
+//-                         img(src='/brincadeira.jpg', alt=' ')
+//-                         .caption
+//-                             h4.pull-right
+//-                             h4
+//-                                 a(href='# ') Brincadeiras
+//-                             p
+//-                         .ratings
+//-                             p.pull-right
+//-                             p
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star-empty
+//-                 .col-sm-4.col-lg-4.col-md-4
+//-                     .thumbnail
+//-                         img(src='/contos.png', alt=' ')
+//-                         .caption
+//-                             h4.pull-right
+//-                             h4
+//-                                 a(href='# ') Contos
+//-                             p
+//-                         .ratings
+//-                             p.pull-right
+//-                             p
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star-empty
+//-                 .col-sm-4.col-lg-4.col-md-4
+//-                     .thumbnail
+//-                         img(src='/culinaria.jpg', alt=' ')
+//-                         .caption
+//-                             h4.pull-right
+//-                             h4
+//-                                 a(href='# ') Culin&aacute;ria
+//-                             p
+//-                         .ratings
+//-                             p.pull-right 6 reviews
+//-                             p
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star-empty
+//-                                 span.glyphicon.glyphicon-star-empty
+//-                 .col-sm-4.col-lg-4.col-md-4
+//-                     .thumbnail
+//-                         img(src='/dança.png', alt=' ')
+//-                         .caption
+//-                             h4.pull-right
+//-                             h4
+//-                                 a(href='# ') Dan&ccedil;a
+//-                             p
+//-                         .ratings
+//-                             p.pull-right 18 reviews
+//-                             p
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star-empty
+//-                 .col-sm-4.col-lg-4.col-md-4
+//-                     .thumbnail
+//-                         img(src='/araraVermelha.jpg', alt=' ')
+//-                         .caption
+//-                             h4.pull-right
+//-                             h4
+//-                                 a(href='# ') Fauna
+//-                             p
+//-                         .ratings
+//-                             p.pull-right
+//-                             p
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star-empty
+//-                 .col-sm-4.col-lg-4.col-md-4
+//-                     .thumbnail
+//-                         img(src='/mudas.jpg', alt=' ')
+//-                         .caption
+//-                             h4.pull-right
+//-                             h4
+//-                                 a(href='# ') Flora
+//-                             p
+//-                         .ratings
+//-                             p.pull-right
+//-                             p
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star-empty
+//-                 .col-sm-4.col-lg-4.col-md-4
+//-                     .thumbnail
+//-                         img(src='/moradia.jpg', alt=' ')
+//-                         .caption
+//-                             h4.pull-right
+//-                             h4
+//-                                 a(href='# ') Moradias
+//-                             p
+//-                         .ratings
+//-                             p.pull-right
+//-                             p
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star
+//-                                 span.glyphicon.glyphicon-star-empty
+//-                 //
+//-                     <div class="col-sm-4 col-lg-4 col-md-4 ">
+//-                     <h4><a href="# ">Like this template?</a>
+//-                     </h4>
+//-                     <p>If you like this template, then check out <a target="_blank " href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/ ">this tutorial</a> on how to build a working review system for your online store!</p>
+//-                     <a class="btn btn-primary " target="_blank " href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/ ">View Tutorial</a>
+//-                     </div>
+
+//- // /.container
+//- // jQuery
+//- script(src='js/jquery.js ')
+//- // Bootstrap Core JavaScript
+//- script(src='js/bootstrap.min.js ')
+//-     // /.container
+//- .container
+//-     hr
+//-     // Footer
+//-     footer
+//-         .row
+//-             .col-lg-12
+//-                 p Copyright &copy; Kaliv&ocirc;no Website 2017
+
+//-     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+//-     script(src='/bootstrap/js/bootstrap.min.js')
+//-     script(src='/bootstrap/js/docs.min.js')

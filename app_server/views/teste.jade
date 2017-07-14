@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    .jumbotron  
+
+         h1=titulo
+    if mensagem
+        if sucesso       
+            .alert.alert-success=mensagem
+        else
+            .alert.alert-danger=mensagem
+    
+    .row
+        .col-xs-12.col-md-8
+            form(action="", method="post", role="form")
+                .form-group
+                    label(for="emTerena") Significado em terena:
+                    input#emTerena.form-control(name="emTerena", required="true")
+                .form-group
+                    label(for="emPortugues") Significado em português:
+                    input#emPortugues.form-control(name="emPortugues", required="true")
+                .form-group
+                    label(for="aplicacaoFrase") Aplicação em uma frase:
+                    textarea#aplicacaoFrase.form-control(name="aplicacaoFrase", required="true")
+                .form-group
+                    label(for="significadoAplicacaoFrase") Significado da aplicação:
+                    textarea#significadoAplicacaoFrase.form-control(name="significadoAplicacaoFrase", required="true")
+                .form-group
+                    label(for="midia") Adicionar URL de mídia:
+                    .form-inline
+                        input#midia.form-control
+                        &nbsp;
+                        a.btn.btn-default(onclick='adicionarMidia()') Adicionar
+                    #mensagemErro.alert.alert-danger(role="alert")
+                    #listaImagens
+                    #listaVideos
+                .form-group
+                    input#multimidia.form-control(type="hidden", name="multimidia")
+                button.btn.btn-primary Cadastrar
+    
+    script(src='/javascripts/cadastrotermo.js')
+        
+

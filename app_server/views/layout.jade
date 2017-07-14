@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/theme.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+                    // Brand and toggle get grouped for better mobile display
+      .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+        a.navbar-brand(href='/') Kaliv&ocirc;no Web
+                // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/') Home
+            li
+              a(href='#') Sobre
+            li
+              a(href='#') Contato
+                // /.navbar-collapse
+    .row
+      .col-md-2
+        p.lead Kaliv&ocirc;no
+          .list-group
+          a.list-group-item(href='#', onclick="buscaPorCategoria('Artesanato')") Artesanato
+          a.list-group-item(href='#', onclick="buscaPorCategoria('Brincadeiras')") Brincadeiras
+          a.list-group-item(href='#', onclick="buscaPorCategoria('Contos')") Contos
+          a.list-group-item(href='#', onclick="buscaPorCategoria('Culinária')") Culin&aacute;ria
+          a.list-group-item(href='#', onclick="buscaPorCategoria('Dança')") Dan&ccedil;a
+          a.list-group-item(href='#', onclick="buscaPorCategoria('Fauna')") Fauna
+          a.list-group-item(href='#', onclick="buscaPorCategoria('Flora')") Flora
+          a.list-group-item(href='#', onclick="buscaPorCategoria('Moradias')") Moradias
+        .col-md-10
+          .container.theme-showcase(role='main')
+        //- .container.theme-showcase(role='main')
+
+// /.container
+// jQuery
+//- script(src='js/jquery.js ')
+// Bootstrap Core JavaScript
+//- script(src='js/bootstrap.min.js ')
+    // /.container
+.container
+  
+    // Footer
+  footer 
+    .row
+      .col-lg-12
+        p Copyright &copy; Kaliv&ocirc;no Website 2017
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/bootstrap/js/docs.min.js')
+    script.
+        var buscaPorCategoria = function(categoria) {
+            console.log(categoria);
+            window.location.href=encodeURI("/termo/busca/" + categoria);
+        }
