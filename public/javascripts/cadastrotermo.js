@@ -1,45 +1,49 @@
 window.onload = function() {
-    document.getElementById('mensagemErro').style.visibility = 'hidden';
+    // document.getElementById('mensagemErro').style.visibility = 'hidden';
+    var midia = document.getElementById('midia').textContent;
+    adicionarMidia();
 }
 
 var midias = [];
 
 var adicionarMidia = function() {
-    document.getElementById('mensagemErro').style.visibility = 'hidden';
-    var midia = document.getElementById('midia').value;
+    var midia = document.getElementById('midia').textContent;
+    document.getElementById('midia').textContent = "";
     var midiaValida = false;
     var novaMidia, tipo;
-    if (midia.toLowerCase().endsWith('png') ||
-        midia.toLowerCase().endsWith('jpg') ||
-        midia.toLowerCase().endsWith('jpeg')) {
-        novaMidia = document.createElement('img');
-        novaMidia.setAttribute('src', midia);
-        novaMidia.setAttribute('style', 'width: 25%; height: 25%');
-        tipo = 'imagem';
-        midiaValida = true;
-        midia = { tipo: 'imagem', url: midia };
-    } else if (midia.toLowerCase().includes('youtube.com')) {
-        var url = midia.replace('watch?v=', 'embed/');
-        novaMidia = document.createElement('iframe');
-        novaMidia.setAttribute('src', url);
-        novaMidia.setAttribute('width', '25%');
-        novaMidia.setAttribute('height', '25%');
-        novaMidia.setAttribute('frameboarder', '0');
-        novaMidia.setAttribute('allowfullscreen', '');
-        midiaValida = true;
-        tipo = 'video';
-        midia = { tipo: 'video', url: midia };
-    }
+    if (midia != undefined) {
+        if (midia.toLowerCase().endsWith('png') ||
+            midia.toLowerCase().endsWith('jpg') ||
+            midia.toLowerCase().endsWith('jpeg')) {
+            novaMidia = document.createElement('img');
+            novaMidia.setAttribute('src', midia);
+            novaMidia.setAttribute('style', 'width: 25%; height: 25%');
+            tipo = 'imagem';
+            midiaValida = true;
+            midia = { tipo: 'imagem', url: midia };
+        } else if (midia.toLowerCase().includes('youtube.com')) {
+            var url = midia.replace('watch?v=', 'embed/');
+            novaMidia = document.createElement('iframe');
+            novaMidia.setAttribute('src', url);
+            novaMidia.setAttribute('width', '400px');
+            novaMidia.setAttribute('height', '400px');
+            novaMidia.setAttribute('frameboarder', '0');
+            novaMidia.setAttribute('allowfullscreen', '');
+            novaMidia.style.marginLeft = '25%';
+            midiaValida = true;
+            tipo = 'video';
+            midia = { tipo: 'video', url: midia };
+        }
 
-    if (midiaValida) {
-        midias.push(midia);
-        adicionaMidiaNaPagina(novaMidia, tipo);
-        document.getElementById('multimidia').value = JSON.stringify(midias);
-    } else {
-        document.getElementById('mensagemErro').style.visibility = 'visible';
-        document.getElementById('mensagemErro').innerHTML = 'URL inválida!';
+        if (midiaValida) {
+            midias.push(midia);
+            adicionaMidiaNaPagina(novaMidia, tipo);
+            // document.getElementById('multimidia').value = JSON.stringify(midias);
+        } else {
+            document.getElementById('mensagemErro').style.visibility = 'visible';
+            document.getElementById('mensagemErro').innerHTML = 'URL inválida!';
+        }
     }
-    document.getElementById('midia').value = '';
 };
 
 var adicionaMidiaNaPagina = function(midia, tipo) {
@@ -57,9 +61,9 @@ var adicionaMidiaNaPagina = function(midia, tipo) {
     var id = 'link' + midias.length;
     linkRemocao.setAttribute('id', id);
     linkRemocao.setAttribute('href', '#' + id);
-    var span = document.createElement('span');
-    span.setAttribute('class', 'glyphicon glyphicon-trash');
-    linkRemocao.appendChild(span);
+    // var span = document.createElement('span');
+    // span.setAttribute('class', 'glyphicon glyphicon-trash');
+    // linkRemocao.appendChild(span);
 
     id = 'midia' + midias.length;
     midia.setAttribute('id', id);
