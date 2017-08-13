@@ -3,7 +3,7 @@ block content
   .row
     - if (termos != null)
         each termo in termos
-          a(href="/termo/busca/" + termo._id, title=termo.emPortugues) 
+          a(href="/termo/busca/" + termo._id, title=termo.termoSolicitado) 
             .col-sm-4.col-lg-4.col-md-4
               .thumbnail  
                 if termo.multimidia
@@ -11,13 +11,13 @@ block content
                 .caption
                   h4.pull-right
                   p.text-center=termo.emPortugues
-                  p.text-center=termo.emTerena
-                  p.text-center=termo.categoria
+                  //- p.text-center=termo.emTerena
+                  //- p.text-center=termo.categoria
+                  
                 .ratings
-                  p.pull-right Leia mais
-                  p
-                  span.glyphicon.glyphicon-star
-                  span.glyphicon.glyphicon-star
-                  span.glyphicon.glyphicon-star
-                  span.glyphicon.glyphicon-star
-                  span.glyphicon.glyphicon-star
+                  
+
+            
+
+                  
+                 
