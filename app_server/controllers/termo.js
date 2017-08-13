@@ -88,3 +88,44 @@ module.exports.buscaPorCategoria = function(req, res) {
         });
     });
 }
+module.exports.buscaTermoPortugues = function(req, res) {
+    console.log(req.params)
+    var caminho = '/api/termos/termoSolicitado/' + encodeURI(req.params.termoSolicitado);
+    var opcoesRequisicao = {
+        url: opcoesApi.servidor + caminho,
+        method: 'GET',
+        json: {}
+    }
+    request(opcoesRequisicao, function(erro, resposta, termos) {
+        var mensagem;
+        if (!(termos instanceof Array)) {
+            mensagem = "Erro ao tentar recuperar os termos";
+            resposta = [];
+        } else if (!termos.length) {
+            mensagem = "Nenhum termo cadastrado";
+        } else {
+            mensagem = termos.length + ' termos cadastrados';
+        }
+
+        res.render('index', {
+            termos: termos,
+            mensagem: mensagem,
+            menu: true
+        });
+    });
+}
+
+// var callback = function(par1, par2, callback) {
+//     callback(par1 + par2)
+// }
+
+// callback(1, 4, function(resultado) {
+//     console.log(resultado * 9)
+// })
+// console.log('teste')
+
+// var callbackSync = function(par1, par2) {
+//     return par1 + par2
+// }
+// var resultado = callbackSync(1, 4)
+// console.log(resultado * 9)
