@@ -22,51 +22,71 @@ html
       span.icon-bar
       span.icon-bar
       span.icon-bar
-        a.navbar-brand(href='/') Kaliv&ocirc;no Web
+      .col-md-6
+        br
+        a#logo.navbar-brand(href='/') K A L I V Ô N O &nbsp; W E B  
+         
                 // Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li
-              a(href='/') Home
-            li
-              a(href='#') Sobre
-            li
-              a(href='#') Contato
-                // /.navbar-collapse
+        //- #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        //-   ul.nav.navbar-nav
+        //-     li
+        //-       a(href='/') Home
+        //-     li
+        //-       a(href='#') Sobre
+        //-     li
+        //-       a(href='#') Contato
+        //-         // /.navbar-collapse  
+           
+      //- .col-md-3
+      //-   br
+      //-   input#filtro.form-control(type='search',for="emPortugues", name="filtro", placeholder='Digite sua busca',required="true")
+      //- .col-md-3
+      //-   br
+      //-   a#botao.btn.btn-default.glyphicon.glyphicon-search(onclick="buscaTermoPortugues()")  Pesquisar
+        
+                            
+  br
   if menu                
     .row
-      .col-md-2
-        p.lead Kaliv&ocirc;no
-          .list-group
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Artesanato')") Artesanato
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Brincadeiras')") Brincadeiras
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Contos')") Contos
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Culinária')") Culin&aacute;ria
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Dança')") Dan&ccedil;a
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Fauna')") Fauna
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Flora')") Flora
-          a.list-group-item(href='#', onclick="buscaPorCategoria('Moradias')") Moradias
-        //- .col-md-10
-      .container.theme-showcase.col-md-10(role='main')
+
+    
+      //- .col-md-2
+        br 
+        .lead 
+                 
+          //- .list-group
+          //- a#artesanato.list-group-item(href='#', onclick="buscaPorCategoria('Artesanato')") Artesanato
+          //- a#brincadeiras.list-group-item(href='#', onclick="buscaPorCategoria('Brincadeiras')") Brincadeiras
+          //- a#contos.list-group-item(href='#', onclick="buscaPorCategoria('Contos')") Contos
+          //- a#culinaria.list-group-item(href='#', onclick="buscaPorCategoria('Culinária')") Culin&aacute;ria
+          //- a#danca.list-group-item(href='#', onclick="buscaPorCategoria('Dança')") Dan&ccedil;a
+          //- a#fauna.list-group-item(href='#', onclick="buscaPorCategoria('Fauna')") Fauna
+          //- a#flora.list-group-item(href='#', onclick="buscaPorCategoria('Flora')") Flora
+          //- a#moradias.list-group-item(href='#', onclick="buscaPorCategoria('Moradias')") Moradias
+                          //- .col-md-10
+      .container.theme-showcase.col-md-12(role='main')
         block content
   else
     .container.theme-showcase.col-md-12(role='main')
       block content              
-            
 
+      
 .container
   
     // Footer
-  footer 
+  footer
     .row
-      .col-lg-12
-        p Copyright &copy; Kaliv&ocirc;no Website 2017
+      .col-md-12
+        b Copyright &copy; Kaliv&ocirc;no Website 2017
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
     script(src='/bootstrap/js/docs.min.js')
     script.
         var buscaPorCategoria = function(categoria) {
-            console.log(categoria);
             window.location.href=encodeURI("/termos/busca/" + categoria);
+        }
+        var buscaTermoPortugues = function() {
+            var termo = document.getElementById('filtro')
+            window.location.href=encodeURI("/termos/filtro/" + termo.value);
         }

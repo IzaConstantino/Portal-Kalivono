@@ -1,6 +1,7 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: azure;
 }
 
 a {
@@ -10,4 +11,130 @@ a {
 img {
     height: 50%;
     width: 100%;
+}
+
+.row {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.navbar-brand {
+    /* menu*/
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+/*#imagem {
+    width: 396px;
+    height: 396px;
+}*/
+
+.thumbnail {
+    width: 396px;
+    height: 300px;
+}
+
+.termoSolicitado {
+    max-width: 290px;
+    max-height: 290px
+}
+
+
+/*.row.carousel-holder {
+    height: 300px;
+    width: 400px;
+}*/
+
+footer {
+    text-align: center;
+    height: 60px;
+    width: 100%;
+}
+
+#filtro {
+    height: 40px;
+    width: 100%;
+    /*position: center;*/
+    text-align: center;
+}
+
+#botao {
+    height: 40px;
+    width: auto;
+    text-align: center;
+}
+
+#h1 {
+    font-family: 'Cooper';
+    /*color: crimson;*/
+    color: blue;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#logo {
+    font-size: 35px;
+    font-family: 'Cooper';
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 30px;
+    color: white;
+}
+
+.navbar-inverse {
+    background-image: -webkit-linear-gradient(top, #3c3c3c 0, #222 100%);
+    background-image: -o-linear-gradient(top, #3c3c3c 0, #222 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
+    background-image: linear-gradient(to bottom, #0000ff 0, #0000ff 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-radius: 4px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #0000ff;
+}
+
+#artesanato {
+    background-color: crimson
+}
+
+#brincadeiras {
+    background-color: orange;
+}
+
+#contos {
+    background-color: gold;
+}
+
+#culinaria {
+    background-color: lightgreen;
+}
+
+#danca {
+    background-color: lightseagreen;
+}
+
+#fauna {
+    background-color: greenyellow;
+}
+
+#flora {
+    background-color: violet;
+}
+
+#moradias {
+    background-color: lightblue;
+}
+
+img.slide-image {
+    max-height: 350px;
+    max-width: 350px;
+}
+
+.jumbotron {
+    background-color: #f0ffff;
 }

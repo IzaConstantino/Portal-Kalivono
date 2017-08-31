@@ -6,16 +6,40 @@ block content
       .alert.alert-success=mensagem
     else
       .alert.alert-danger=mensagem
+  .row
+   br
+   br
+   .col-md-4
+     img(id="imagem" 
+     src=termo.multimidia[0].url, alt=' ')     
+   .col-md-4
+       h3
+        b= " Termo em português: " 
+        span=termo.emPortugues 
+        br
+        br
+        b= " Termo em terena: " 
+        span=termo.emTerena 
+        br
+        br
+        b= " Aplicação: " 
+        span=termo.aplicacaoFrase 
+        br
+        br
+        b= " Categoria: " 
+        span=termo.categoria 
+      //- h3.text-left= " Termo em português: " + termo.emPortugues 
+      //- h3.text-left= " Termo em terena: " + termo.emTerena
+      //- h3.text-left= " Aplicação: " + termo.aplicacaoFrase
+      //- h3.text-left= " Categoria: " + termo.categoria 
     
-  img(id="imagem" style="width: 400px; height: 400px"
-   src=termo.multimidia[0].url, alt=' ')
-  p.text-center=termo.emPortugues
-  p.text-center=termo.emTerena
-  p.text-center=termo.categoria     
-  if termo.multimidia.length > 1
-    #midia= termo.multimidia[1].url
-    #listaVideos
-      
-    script(src='/javascripts/cadastrotermo.js') 
+   .col-md-4.col-md-pull-1
+      if termo.multimidia.length > 1
+      #midia= termo.multimidia[1].url
+      #listaVideos
+    //- .col-md-3  
+    //-  h3.text-left= " Aplicação: " + termo.aplicacaoFrase
+  script(src='/javascripts/cadastrotermo.js') 
+    
         
 

@@ -2,38 +2,57 @@ extends layout
 
 // Page Content
 
-block content
+block content 
+  .jumbotron  
+    h1#h1.text-center KALIVÔNO 
+    h1#h1.text-center KÁLIHUNOE IKE VÓ'UM 
+   
+  .col-md-4.col-md-push-3
+      input#filtro.form-control(type='search',for="emPortugues", name="filtro", placeholder='Digite sua busca',required="true")
+  .col-md-4.col-md-push-3
+     a#botao.btn.btn-default.glyphicon.glyphicon-search(onclick="buscaTermoPortugues()")  Pesquisar 
+
   .row
-    .col-md-9                  
-      if (termosCarousel != null)
-        .row.carousel-holder
-          .col-md-12
-            #carousel-example-generic.carousel.slide(data-ride='carousel')
-              - var i = -1
-              ol.carousel-indicators
-                for termo in termosCarousel
-                  -i++
-                  if i == 0 
-                    li.active(data-target='#carousel-example-generic', data-slide-to=i)
-                  else 
-                    li(data-target='#carousel-example-generic', data-slide-to=i)
+    .col-md-10  
+            
+      //- if (termosCarousel != null)
+      //-   .row.carousel-holder
+      //-     .col-md-offset-3
+      //-       #carousel-example-generic.carousel.slide(data-ride='carousel')
+      //-         - var i = -1
+      //-         ol.carousel-indicators
+      //-           for termo in termosCarousel
+      //-             -i++
+      //-             if i == 0 
+      //-               li.active(data-target='#carousel-example-generic', data-slide-to=i)
+      //-             else 
+      //-               li(data-target='#carousel-example-generic', data-slide-to=i)
+                    
+      //-         .carousel-inner
+      //-           -var i = -1 
+      //-           for termo in termosCarousel
+      //-             -i++
+      //-             if i == 0
+      //-               .item.active
+      //-                 img.slide-image(src='#{termo.multimidia[0].url}', alt='')
+      //-                 h3.text-center=termo.emTerena
+      //-             else 
+      //-               .item
+      //-                 img.slide-image(src='#{termo.multimidia[0].url}', alt='')
+      //-                 h3.text-center=termo.emTerena
 
-              .carousel-inner
-                -var i = -1 
-                for termo in termosCarousel
-                  -i++
-                  if i == 0
-                    .item.active
-                      img.slide-image(src='#{termo.multimidia[0].url}', alt='')
-                      h3.text-center=termo.emTerena
-                  else 
-                    .item
-                      img.slide-image(src='#{termo.multimidia[0].url}', alt='')
-                      h3.text-center=termo.emTerena
-
-              a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
-                span.glyphicon.glyphicon-chevron-left
-              a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
-                span.glyphicon.glyphicon-chevron-right
+      //-         a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+      //-           span.glyphicon.glyphicon-chevron-left
+      //-         a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+      //-           span.glyphicon.glyphicon-chevron-right
   .row
     include categorias
+
+     script.
+        var buscaPorCategoria = function(categoria) {
+            window.location.href=encodeURI("/termos/busca/" + categoria);
+        }
+        var buscaTermoPortugues = function() {
+            var termo = document.getElementById('filtro')
+            window.location.href=encodeURI("/termos/filtro/" + termo.value);
+        }
