@@ -1,7 +1,7 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: azure;
+    /*background-color: azure;*/
 }
 
 a {
@@ -72,7 +72,7 @@ footer {
     font-family: 'Cooper';
     /*color: crimson;*/
     color: blue;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 }
 
 #logo {
@@ -136,5 +136,6 @@ img.slide-image {
 }
 
 .jumbotron {
-    background-color: #f0ffff;
+    /*background-color: #f0ffff;*/
+    background-color: white;
 }
